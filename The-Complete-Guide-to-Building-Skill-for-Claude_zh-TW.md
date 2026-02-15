@@ -76,13 +76,13 @@ Claude 可同時載入多個技能。你的技能應該能和其他技能共存�
 
 #### 3. 可攜性（Portability）
 
-技能可跨 `Claude.ai`、`Claude Code`、`API` 使用。只要環境支援相依需求，一份技能可跨介面重用。
+技能可跨 [`Claude.ai`](https://claude.ai)、`Claude Code`、`API` 使用。只要環境支援相依需求，一份技能可跨介面重用。
 
 ### 給 MCP 開發者：Skills + Connectors
 
 > 若你只做獨立技能且不使用 MCP，可先跳到第 2 章。
 
-若你已有可運作的 MCP 伺服器，最難的連線層已完成。技能是上層知識層：把你已知的流程與最佳實務固化，讓 Claude 能穩定套用。
+若你已有[可運作的 MCP 伺服器](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop)，最難的連線層已完成。技能是上層知識層：把你已知的流程與最佳實務固化，讓 Claude 能穩定套用。
 
 #### 廚房比喻
 
@@ -472,7 +472,7 @@ Solution: [解法]
 
 ### 開放標準
 
-`Agent Skills` 已作為開放標準發布。與 MCP 一樣，技能應可跨平台重用；但若技能依賴特定平台能力，可在 `compatibility` 欄位註明。
+[`Agent Skills`](https://agentskills.io/home) 已作為開放標準發布。與 [MCP](https://modelcontextprotocol.io) 一樣，技能應可跨平台重用；但若技能依賴特定平台能力，可在 `compatibility` 欄位註明。
 
 ### 透過 API 使用技能
 
@@ -480,17 +480,17 @@ Solution: [解法]
 
 重點能力：
 
-- `/v1/skills`：列出與管理技能
-- 透過 `container.skills` 將技能加入 Messages API
+- [`/v1/skills`](https://docs.claude.com/en/api/skills/create-skill)：列出與管理技能
+- 透過 `container.skills` 將技能加入 [Messages API](https://docs.claude.com/en/api/skills/create-skill)
 - 可在 Claude Console 做版本管控
-- 可與 Claude Agent SDK 搭配
+- 可與 [Claude Agent SDK](https://docs.claude.com/en/docs/agent-sdk/skills) 搭配
 
 何時用 API、何時用 Claude.ai：
 
 - 人直接互動、開發中手動測試、臨時流程：`Claude.ai / Claude Code`
 - 大規模生產部署、自動化管線：`API`
 
-> API 中技能需搭配 Code Execution Tool beta。
+> API 中技能需搭配 [Code Execution Tool beta](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/quickstart)。
 
 ### 目前建議做法
 
@@ -667,28 +667,28 @@ Solution: [解法]
 
 ### 官方文件
 
-- Best Practices Guide
-- Skills Documentation
-- API Reference
-- MCP Documentation
+- [Best Practices Guide](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
+- [Skills Documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+- [API Reference](https://platform.claude.com/docs/en/api/overview)
+- [MCP Documentation](https://modelcontextprotocol.io)
 
 ### 文章
 
-- Introducing Agent Skills
-- Engineering Blog: Equipping Agents for the Real World
-- Skills Explained
-- How to Create Skills for Claude
-- Building Skills for Claude Code
-- Improving Frontend Design through Skills
+- [Introducing Agent Skills](https://claude.com/blog/skills)
+- [Engineering Blog: Equipping Agents for the Real World](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+- [Skills Explained](https://www.claude.com/blog/skills-explained)
+- [How to Create Skills for Claude](https://www.claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples)
+- [Building Skills for Claude Code](https://www.claude.com/blog/building-skills-for-claude-code)
+- [Improving Frontend Design through Skills](https://www.claude.com/blog/improving-frontend-design-through-skills)
 
 ### 範例技能
 
-- GitHub：`anthropics/skills`
+- GitHub：[`anthropics/skills`](https://github.com/anthropics/skills)
 - 含 Anthropic 官方範例，可直接改成你的版本
 
 ### 工具與實用資源
 
-`skill-creator`：
+[`skill-creator`](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md)：
 
 - 內建於 Claude.ai，也可用在 Claude Code
 - 可由描述自動產生技能
@@ -696,8 +696,8 @@ Solution: [解法]
 
 ### 取得支援
 
-- 技術問題：Claude Developers Discord 社群
-- 錯誤回報：`anthropics/skills/issues`
+- 技術問題：[Claude Developers Discord 社群](https://discord.com/invite/6PPFFzqPDZ)
+- 錯誤回報：[`anthropics/skills/issues`](https://github.com/anthropics/skills/issues)
 - 回報時請附：技能名稱、錯誤訊息、重現步驟
 
 ---
@@ -791,8 +791,13 @@ metadata:  # 選填：自訂欄位
 
 若想看可直接上線的完整範例，可參考：
 
-- Document Skills：PDF、DOCX、PPTX、XLSX 產製
-- Example Skills：多種工作流程模式
-- Partner Skills Directory：Asana、Atlassian、Canva、Figma、Sentry、Zapier 等夥伴技能
+- Document Skills：
+  [PDF](https://github.com/anthropics/skills/tree/main/skills/pdf)、
+  [DOCX](https://github.com/anthropics/skills/tree/main/skills/docx)、
+  [PPTX](https://github.com/anthropics/skills/tree/main/skills/pptx)、
+  [XLSX](https://github.com/anthropics/skills/tree/main/skills/xlsx) 產製
+- [Example Skills](https://github.com/anthropics/skills/tree/main/skills)：多種工作流程模式
+- [Frontend Design Skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design)：前端設計工作流範例
+- [Partner Skills Directory](https://www.claude.com/connectors)：Asana、Atlassian、Canva、Figma、Sentry、Zapier 等夥伴技能（例如 [Sentry Skills](https://github.com/getsentry/sentry-for-claude/tree/main/skills)）
 
 這些 repo 會持續更新，涵蓋本指南以外的更多案例。可直接 clone 後依需求調整成你的版本。
